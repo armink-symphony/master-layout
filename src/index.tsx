@@ -1,20 +1,48 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 import "./index.css"
-import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import DefaultLayout from "./Layouts/DefaultLayout/DefaultLayout"
+import {
+  ButtonStyled,
+  ListStyled,
+  TextStyled,
+} from "@nike/nike-design-system-components"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <DefaultLayout child={<div>Home</div>} />,
+    element: (
+      <DefaultLayout
+        child={
+          <ListStyled listStyle='none' aria-label='descriptive aria label'>
+            <li>
+              <TextStyled appearance='body1Strong'>
+                4 Frozen Bananas, Sliced
+              </TextStyled>
+            </li>
+            <li>
+              <TextStyled appearance='body1Strong'>
+                2 Cups Frozen Mango Cubes
+              </TextStyled>
+            </li>
+            <li>
+              <TextStyled appearance='body1Strong'>4 Frozen Bananas</TextStyled>
+              <TextStyled appearance='body2' color='secondary'>
+                Sliced
+              </TextStyled>
+            </li>
+          </ListStyled>
+        }
+      />
+    ),
   },
   {
     path: "/demographics",
-    element: <DefaultLayout child={<div>Demographics</div>} />,
+    element: <DefaultLayout child={<ButtonStyled>TEST</ButtonStyled>} />,
   },
 ])
 
