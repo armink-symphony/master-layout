@@ -1,4 +1,4 @@
-import { VerticalNavbar } from "@nike/eds"
+import { VerticalNavbar, setActiveValueInNavItems } from "@nike/eds"
 import { useState } from "react"
 
 const Sidebar = () => {
