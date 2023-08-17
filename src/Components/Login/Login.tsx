@@ -2,8 +2,6 @@ import { useState } from "react"
 
 import { Button, Link, Text, TextField } from "@nike/eds"
 
-import nikeLogo from "./../../public/images/nike.png"
-
 import "./login.scss"
 
 const Login = () => {

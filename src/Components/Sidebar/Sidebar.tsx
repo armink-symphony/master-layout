@@ -1,4 +1,9 @@
-import { VerticalNavbar, setActiveValueInNavItems } from "@nike/eds"
+import {
+  NavEvent,
+  NavItem,
+  VerticalNavbar,
+  setActiveValueInNavItems,
+} from "@nike/eds"
 import { useState } from "react"
 
 const Sidebar = () => {
@@ -51,7 +56,7 @@ const Sidebar = () => {
       label: "Rewards",
       active: false,
     },
-  ])
+  ] as NavEvent[])
 
   const [bottomItems, setBottomItems] = useState([
     {
@@ -82,9 +87,12 @@ const Sidebar = () => {
 
   // Click event function example that sets the active value for a nav item
   // Updates the items array with the new items with active state
-  const handleClick = (item: any) => {
-    // const newItems = setActiveValueInNavItems(item.id, items)
-    // setItems(newItems)
+  const handleClick = (item: NavEvent) => {
+    const newItems: NavItem[] | undefined = setActiveValueInNavItems(
+      item.id,
+      items as NavItem[]
+    )
+    setItems(newItems as NavEvent[])
   }
 
   return (
@@ -103,7 +111,7 @@ const Sidebar = () => {
         appName='App Name'
         appSubtitle='Some Subtitle Text'
         onNavigate={handleClick}
-        items={items}
+        items={items as NavItem[]}
         bottomItems={bottomItems}
       />
     </div>
