@@ -1,5 +1,13 @@
+import { AppHeader } from "@nike/eds"
+
 const Header = () => {
-  return <div>Header</div>
+  return (
+    <AppHeader
+      avatarSlot={<>aa</>}
+      toolbarSlot={<>ee</>}
+      appName="Athlete's portal"
+    />
+  )
 }
 
 export default Header
