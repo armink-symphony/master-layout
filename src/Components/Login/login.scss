@@ -1,0 +1,27 @@
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--eds-color-background-secondary);
+
+    &-wrapper {
+        width: 100%;
+        max-width: 600px;
+        padding: var(--eds-space-12);
+    }
+
+    &-email-field {
+        margin-bottom: var(--eds-space-16);
+    }
+
+    &-btn {
+        margin-top: var(--eds-space-40);
+    }
+
+    &-logo {
+        margin-bottom: var(--eds-space-40);
+    }
+}
